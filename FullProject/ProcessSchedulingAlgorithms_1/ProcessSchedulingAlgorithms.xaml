@@ -1,0 +1,69 @@
+﻿<Window x:Class="FullProject.ProcessSchedulingAlgorithms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FullProject"
+        mc:Ignorable="d"
+        Title="Process Scheduling Simulation" Height="578.8" Width="800">
+    <Grid x:Name="main_grid" Margin="0,22,-0.4,-8.6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="783*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="Enter Process Information" HorizontalAlignment="Left" Height="123" Margin="9.8,0,0,0" VerticalAlignment="Top" Width="739" FontWeight="Bold" Grid.Column="1"/>
+
+        <TextBox x:Name="process_id_textBox" HorizontalAlignment="Left" Height="20" Margin="79.8,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="process_id_textBox_TextChanged" RenderTransformOrigin="0.594,-0.79" Grid.Column="1"/>
+        <Label x:Name="label_processID" Content="Process ID :" HorizontalAlignment="Left" Margin="9.8,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.062,0.563" Height="25" Grid.Column="1"/>
+        <TextBox x:Name="arrival_time_textBox" HorizontalAlignment="Left" Height="20" Margin="258.8,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="-0.319,0.617" TextChanged="arrival_time_textBox_TextChanged" Grid.Column="1"/>
+        <Label Content="Arrival Time:" HorizontalAlignment="Left" Margin="183.8,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.062,0.563" Height="23" Grid.Column="1"/>
+        <TextBox x:Name="bust_time_textBox" HorizontalAlignment="Left" Height="20" Margin="442.8,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="bust_time_textBox_TextChanged" RenderTransformOrigin="-0.319,0.617" Grid.Column="1"/>
+        <Label Content="Burst Time:" HorizontalAlignment="Left" Margin="373.8,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.062,0.563" Height="23" Grid.Column="1"/>
+        <TextBox x:Name="quantum_textBox" HorizontalAlignment="Left" Height="20" Margin="615.8,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="quantum_textBox_TextChanged" RenderTransformOrigin="-0.319,0.617" Grid.Column="1"/>
+        <Label x:Name="quantum_label" Content="Quantum:" HorizontalAlignment="Left" Margin="553.8,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.062,0.563" Height="23" Grid.Column="1"/>
+        <Button x:Name="insert_button1" Content="Insert" HorizontalAlignment="Left" Margin="121.8,89,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="insert_button1_Click" Grid.Column="1"/>
+        <Button x:Name="run_button" Content="RUN" HorizontalAlignment="Left" Margin="339.8,89,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="run_button_Click" Grid.Column="1"/>
+        <Button x:Name="remove_button" Content="Remove" HorizontalAlignment="Left" Margin="540.8,89,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="remove_button_Click" Grid.Column="1"/>
+        <Grid x:Name="Panel" HorizontalAlignment="Left" Height="251" Margin="9.8,128,0,0" VerticalAlignment="Top" Width="539" OpacityMask="Black" Background="#FFADADAD" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Label Content="" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="89" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF2E2E2E" Foreground="White"/>
+            <Label Content="Process Id" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="89" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF2E2E2E" Foreground="White"/>
+            <Label Content="Arrival Tİme" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="89" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF2E2E2E" Foreground="White"/>
+            <Label Content="Bust Time" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="89" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF2E2E2E" Foreground="White"/>
+            <Label Content="Turnaround Time" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="111" FontWeight="Bold" Grid.ColumnSpan="3" Background="#FF2E2E2E" Foreground="White" Margin="85.4,0,0,0"/>
+            <Label Content="Waiting Time" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="89" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF2E2E2E" Foreground="White"/>
+        </Grid>
+
+        <GroupBox x:Name="groupBox_algorithms" Header="Select Scheduling Algorithms" HorizontalAlignment="Left" Height="197" Margin="553.8,182,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" Grid.Column="1">
+            <StackPanel x:Name="stackPanel_algorithms" HorizontalAlignment="Left" Height="136" Margin="0,10,-1.8,0" VerticalAlignment="Top" Width="185">
+                <RadioButton x:Name="FCFS_radioButton" Content="FCFS(First Come First Serve)" Margin="0,15,-0.2,0" FontWeight="Normal"/>
+                <RadioButton x:Name="SJF_radioButton" Content="SJF(Shortest Job First)" Margin="0,15,-0.2,0" FontWeight="Normal"/>
+                <RadioButton x:Name="SRTF_radioButton" Content="SRTF(Shortest Remaining Time First)" Margin="0,15,-0.2,0" FontWeight="Normal"/>
+                <RadioButton x:Name="RR_radioButton" Content="RR(Round Robin)" Margin="0,15,-0.2,0" FontWeight="Normal"/>
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="Average Time&#xA;" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="749" Margin="11,398,0,0" FontWeight="Bold" Grid.ColumnSpan="2">
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,-14,-1.8,-6.4" VerticalAlignment="Top" Width="719">
+                <Label Content="Average Turn Around Time:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,4,0,0" FontWeight="Normal"/>
+                <Label Content="Average Waiting Time:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="352,4,0,0" FontWeight="Normal"/>
+                <TextBox x:Name="turnAroundTime_TextBox" HorizontalAlignment="Left" Height="23" Margin="157,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFAE3535" Foreground="White"/>
+                <TextBox x:Name="waitingTime_TextBox" HorizontalAlignment="Left" Height="23" Margin="483,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFAE3535" Foreground="White"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

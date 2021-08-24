@@ -1,0 +1,24 @@
+﻿<Window x:Class="FullProject.DekkersAlgorithm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FullProject"
+        mc:Ignorable="d"
+        Title="Dekker's Algorithm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="745*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="start_Button1" Content="Start" HorizontalAlignment="Left" Margin="35,163,0,0" VerticalAlignment="Top" Width="189" Height="35" TabIndex="0" Background="#FF7D94D4" Click="start_Button_Click" Grid.ColumnSpan="3"/>
+        <Label Content="LOG" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-3.07" Foreground="#FF1E0096" FontWeight="Bold" BorderBrush="#FF0400BA" Background="White" Margin="452.2,64,0,0" Grid.Column="2" FontSize="20" Width="59"/>
+        <StackPanel x:Name="log_StackPannel" HorizontalAlignment="Left" Height="309" Margin="204.2,101,0,0" VerticalAlignment="Top" Width="531" Grid.Column="2"/>
+        <Label Content="For starting 2 processes (threads) please click start button." HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-3.07" Foreground="#FF960000" FontWeight="Bold" BorderBrush="#FF0400BA" Background="White" Margin="35,38,0,0" Width="461" Height="56" FontSize="16" Grid.ColumnSpan="3"/>
+        <Button x:Name="reset_Button1" Content="Reset" HorizontalAlignment="Left" Margin="35,219,0,0" VerticalAlignment="Top" Width="189" Height="35" TabIndex="0" Background="#FFD47D7D" Click="reset_Button_Click" Grid.ColumnSpan="3"/>
+        <Label Content="Denote which thread will enter next :&#xD;&#xA;Enter 1 For P1&#xD;&#xA;Enter 2 For P2" HorizontalAlignment="Left" Margin="35,78,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="213" Height="80"/>
+        <TextBox x:Name="processCount_textBox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="199.2,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" TextChanged="processCount_TextChanged"/>
+
+    </Grid>
+</Window>

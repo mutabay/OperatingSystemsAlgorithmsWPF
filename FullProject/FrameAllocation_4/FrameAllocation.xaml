@@ -1,0 +1,39 @@
+﻿<Window x:Class="FullProject.FrameAllocation_4.FrameAllocation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FullProject.FrameAllocation_4"
+        mc:Ignorable="d"
+        Title="FrameAllocation" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="selectAlgorithm_ComboBox" HorizontalAlignment="Left" Margin="122,30,0,0" VerticalAlignment="Top" Width="107" SelectionChanged="selectAlgorithm_ComboBox_SelectionChanged"/>
+        <Label Content="Select Algorithm :" HorizontalAlignment="Left" Margin="13,27,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="processNumber_TextBox" HorizontalAlignment="Left" Height="23" Margin="150,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" TextChanged="processNumber_TextBox_TextChanged"/>
+        <Label Content="Number of processes :" HorizontalAlignment="Left" Margin="13,74,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="pageReference_TextBox" HorizontalAlignment="Left" Height="23" Margin="150,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" TextChanged="pageReference_TextBox_TextChanged"/>
+        <Label Content="Add page references :" HorizontalAlignment="Left" Margin="13,117,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addPageReference_Button" Content="Add" HorizontalAlignment="Left" Margin="22,159,0,0" VerticalAlignment="Top" Width="207" Height="51" TabIndex="14" RenderTransformOrigin="-1.192,-1.812" Background="#FF5A6794" Click="addPageReference_Button_Click"/>
+        <Button x:Name="createRandom_Button" Content="Create Rand Request" HorizontalAlignment="Left" VerticalAlignment="Top" Width="207" Margin="22,277,0,0" Height="56" BorderBrush="Black" Background="#FF5A6794" Click="createRandom_Button_Click"/>
+        <Label x:Name="addRequest_label_Copy" Content="Rand Page Ref. Count :" HorizontalAlignment="Left" Margin="18,232,0,0" VerticalAlignment="Top" Width="132" TabIndex="12"/>
+        <TextBox x:Name="randomPageRef_Textbox" HorizontalAlignment="Left" Height="23" Margin="150,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" TabIndex="13" Text="0" Background="Gainsboro" BorderBrush="#FF00134B" TextChanged="randomPageRef_Textbox_TextChanged"/>
+        <Button x:Name="start_Button" Content="Start" HorizontalAlignment="Left" Margin="133,347,0,0" VerticalAlignment="Top" Width="96" Height="35" TabIndex="0" Background="#FF9BD47D" Click="start_Button_Click"/>
+        <Button x:Name="reset_Button" Content="Reset" HorizontalAlignment="Left" Margin="22,347,0,0" VerticalAlignment="Top" Width="102" Height="34" TabIndex="11" Background="#FFD17C7C" Click="reset_Button_Click"/>
+        <Grid>
+            <Label Content="Seek Page References" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-3.07" Foreground="#FF1E0096" FontWeight="Bold" BorderBrush="#FF0400BA" Background="White" Margin="460,109,0,0"/>
+            <Button x:Name="addPageReference_Button1" Content="Add" HorizontalAlignment="Left" Margin="22,159,0,0" VerticalAlignment="Top" Width="207" Height="51" TabIndex="14" RenderTransformOrigin="-1.192,-1.812" Background="#FF5A6794" Click="addPageReference_Button_Click"/>
+            <Button x:Name="createRandom_Button1" Content="Create Rand Pages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="207" Margin="22,277,0,0" Height="56" BorderBrush="Black" Background="#FF5A6794" Click="createRandom_Button_Click"/>
+            <Label x:Name="addRequest_label_Copy1" Content="Rand Page Ref. Count :" HorizontalAlignment="Left" Margin="18,232,0,0" VerticalAlignment="Top" Width="132" TabIndex="12"/>
+            <Button x:Name="start_Button1" Content="Start" HorizontalAlignment="Left" Margin="133,347,0,0" VerticalAlignment="Top" Width="96" Height="35" TabIndex="0" Background="#FF9BD47D" Click="start_Button_Click"/>
+            <Button x:Name="reset_Button1" Content="Reset" HorizontalAlignment="Left" Margin="22,347,0,0" VerticalAlignment="Top" Width="102" Height="34" TabIndex="11" Background="#FFD17C7C" Click="reset_Button_Click"/>
+            <StackPanel x:Name="showPageRef_StackPannel" HorizontalAlignment="Left" Height="33" Margin="252,145,0,0" VerticalAlignment="Top" Width="532"/>
+            <Label Content="Number Of Processes" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-3.07" Foreground="#FF1E0096" FontWeight="Bold" BorderBrush="#FF0400BA" Background="White" Margin="460,27,0,0" Width="131"/>
+            <StackPanel x:Name="numberOfProcesses_StackPanel" HorizontalAlignment="Left" Height="51" Margin="460,58,0,0" VerticalAlignment="Top" Width="131"/>
+            <Label Content="Output" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-3.07" Foreground="#FF1E0096" FontWeight="Bold" BorderBrush="#FF0400BA" Background="White" Margin="497,183,0,0"/>
+            <StackPanel x:Name="output_StackPannel" HorizontalAlignment="Left" Height="178" Margin="252,232,0,0" VerticalAlignment="Top" Width="532"/>
+            <StackPanel x:Name="frameHeader_StackPannel" HorizontalAlignment="Left" Height="40" Margin="252,214,0,0" VerticalAlignment="Top" Width="532"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
