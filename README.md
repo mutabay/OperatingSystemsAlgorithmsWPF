@@ -24,4 +24,3 @@ Inside of the project, there is =>
 7. Dekker’s Algorithm
 ![image](https://user-images.githubusercontent.com/60510780/130607513-b95f9d1b-f35c-4904-9701-6d7bf0de1839.png)
 
-Documents that related about algorithms are inside of the DOCS file.
