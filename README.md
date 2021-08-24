@@ -1,5 +1,6 @@
 # OperatingSystemsAlgorithmsWPF
 Operating Systems Algorithms Implementation With WPF
+![image](https://user-images.githubusercontent.com/60510780/130607292-8cbab64d-77a1-4d80-b68c-e5f3053c9e21.png)
 
 Inside of the project, there is => 
 1. Processor scheduling algorithms ( First Come First Serve (FCFS), Shortest Job First (SJF), Shortest Remaining Time First (SRTF), Round-Robin (RR) )
